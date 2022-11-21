@@ -58,6 +58,18 @@ jobs:
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
 
+    - if: matrix.language == 'csharp' 
+      name: Setup dotnet
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: | 
+          7.0.x
+          
+    - if: matrix.language == 'csharp' 
+      run: |
+        dotnet restore
+        dotnet build --no-restore --configuration Release
+
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
 
