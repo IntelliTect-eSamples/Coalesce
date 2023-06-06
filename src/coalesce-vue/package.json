@@ -57,7 +57,7 @@
     "cross-blob": "^1.2.1",
     "lodash": "^4.17.15",
     "typescript": "4.8.4",
-    "vite": "3.0.8",
+    "vite": "3.2.7",
     "vitest": "0.22.1",
     "vue": "2.7.8",
     "vue-router": "3.5.4"
